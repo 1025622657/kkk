@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .item .c1{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="item" name="d">sdf
+        <p onclick="foo(this)">菜单3</p>
+        <div class="c1">333</div>
+        <input type="text">
+    </div>
+</body>
+<script>
+    var ele = document.getElementsByTagName('input')[0];
+    //console.log(ele);
+    ele.html='yyydfasdfasdfay';
+    console.log(ele);
+    function foo(self) {
+        // alert(123);
+        // console.log(self);//指代当前操作的标签,即p
+
+        //获取下一个兄弟标签元素，即操作标签(p)下的div属性
+         //console.log(self.nextElementSibling);
+         //var ele=self.nextElementSibling;
+
+
+        // ele.style.display="block";//显示点击标签下的属性
+        // console.log(self.parentElement);//父标签,即操作标签p的父级标签item
+
+        //定位到item的方式1：操作标签的父级父级定位
+        // var eles=self.parentElement.parentElement.children;//div.item
+        // console.log(eles);
+        // for (var i=0;i<eles.length;i++){
+        //     console.log(eles[i]);//定位到item
+        // }
+        // self.nextElementSibling.style.display="block";
+
+        // =================
+        //定位到item的方式2
+        //等同于<style>下的属性设置
+        // var eles=document.getElementsByClassName("c1");
+
+        // for (var i=0;i<eles.length;i++){
+        //     console.log(eles[i]);
+        //     eles[i].style.display="none";
+        // }
+
+        // self.nextElementSibling.style.display="block";//操作标签p的下标签c1
+
+        // =======================
+        //方式3无效：直接定位操作标签的兄弟标签，
+        // self.parentElement.siblings;
+        // console.log(eles);
+    }
+</script>
+</html>

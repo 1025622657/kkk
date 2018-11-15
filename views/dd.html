@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //==========事例1============
+         /*var s=12;
+         function f(){
+             console.log(s);//undefind(定义未赋值)
+              var s=33;          // if s=12,则console.log(s)均为12
+             console.log(s);//12
+         }
+         f();*/
+        //===============事例2============
+         var s=10;
+         function foo(){
+           console.log(s);//注：function s(){}
+           var s=5;
+           console.log(s);//5
+           function s(){console.log("ok")};// 函数的定于或声明是在词法分析时完成的,执行时已不再有任何操作
+          console.log(s);//5
+         };
+         foo();
+        //===============事例3==========
+        /*function bar(age) {
+
+            console.log(age);//function age(){}
+            var age = 99;
+            var sex= 'male';
+            console.log(age);//99
+            function age() {
+                alert(123)
+            };
+            console.log(age);//99
+            return 100;
+        }
+
+        result=bar(5);
+
+*/
+    </script>
+</head>
+<body>
+
+</body>
+</html>

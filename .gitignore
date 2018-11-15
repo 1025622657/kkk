@@ -102,4 +102,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-.app01/migirations/
+.app01/migrations/
